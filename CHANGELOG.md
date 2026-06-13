@@ -19,6 +19,6 @@ Initial public release prepared for GitHub.
 
 ### Notes
 
-- The project includes an AI usage declaration in `AI_USAGE.md`.
+- The project was developed with AI assistance.
 - The default configuration keeps `dry_run=true`, `auto_reply_enabled=false`, and `require_confirmation=true`.
 - B站 web endpoints may change or trigger risk controls; production deployments should keep conservative request frequency and manual review enabled.

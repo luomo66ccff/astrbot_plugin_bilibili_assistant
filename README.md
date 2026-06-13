@@ -5,7 +5,7 @@
 ## 项目状态
 
 - 许可证：MIT License，见 [LICENSE](LICENSE)。
-- AI 使用声明：本项目代码、文档和测试由用户提出需求，并在 AI 编程助手辅助下复制、整理、改写和生成，见 [AI_USAGE.md](AI_USAGE.md)。
+- 开发说明：本项目在开发过程中使用 AI 辅助。
 - 安全说明：部署前请阅读 [SECURITY.md](SECURITY.md)，不要把 B站 Cookie、账号凭证或隐私数据提交到仓库。
 - 当前版本：`v0.2.13`。
 
