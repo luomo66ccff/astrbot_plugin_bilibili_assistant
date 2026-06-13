@@ -1,0 +1,9 @@
+name: astrbot_plugin_bilibili_assistant
+display_name: B站评论助手
+short_desc: B站评论区运营辅助，默认人工确认与安全演练。
+desc: B站评论区运营辅助插件，支持评论读取、草稿生成、扫码登录、人工确认、监听任务和审计日志。
+help: 使用 /bili_help 查看命令列表。
+version: v0.2.13
+author: luomo0712
+repo: ""
+astrbot_version: ">=4.9.2"

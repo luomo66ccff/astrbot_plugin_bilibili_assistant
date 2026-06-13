@@ -1,0 +1,37 @@
+# Python cache and test output
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# AstrBot runtime data and generated artifacts
+plugin_data/
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+*.csv
+*.log
+
+# Local install packages
+*.zip
+
+# Secrets and local configuration
+.env
+.env.*
+*.local
+config.local.*
+
+# Editor and OS noise
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

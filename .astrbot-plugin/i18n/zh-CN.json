@@ -1,0 +1,8 @@
+{
+  "pages": {
+    "dashboard": {
+      "title": "B站评论助手 Dashboard",
+      "description": "查看状态、扫码登录、管理草稿与监听任务。"
+    }
+  }
+}

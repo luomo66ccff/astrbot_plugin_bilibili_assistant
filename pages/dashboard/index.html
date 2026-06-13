@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>B站评论助手</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>B站评论助手</h1>
+          <p id="subtitle">评论运营、扫码登录、草稿审核</p>
+        </div>
+        <button id="refreshBtn" type="button">刷新</button>
+      </header>
+
+      <section class="status-grid" aria-label="状态概览">
+        <div class="metric">
+          <span>插件</span>
+          <strong id="enabled">-</strong>
+        </div>
+        <div class="metric">
+          <span>Cookie</span>
+          <strong id="cookie">-</strong>
+        </div>
+        <div class="metric">
+          <span>演练</span>
+          <strong id="dryRun">-</strong>
+        </div>
+        <div class="metric">
+          <span>今日日志</span>
+          <strong id="todayLogs">-</strong>
+        </div>
+      </section>
+
+      <section class="panel login-panel">
+        <div class="panel-head">
+          <div>
+            <h2>扫码登录</h2>
+            <p id="accountLine">账号状态加载中</p>
+          </div>
+          <button id="qrBtn" type="button">生成二维码</button>
+        </div>
+        <div class="qr-row">
+          <div class="qr-box" id="qrBox">
+            <span>等待生成</span>
+          </div>
+          <div class="qr-copy">
+            <p id="qrState">未开始</p>
+            <a id="qrLink" href="#" target="_blank" rel="noreferrer">打开登录链接</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="columns">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>待审核草稿</h2>
+          </div>
+          <div id="drafts" class="list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>监听任务</h2>
+          </div>
+          <div id="tasks" class="list"></div>
+        </section>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>最近日志</h2>
+        </div>
+        <div id="logs" class="list compact"></div>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

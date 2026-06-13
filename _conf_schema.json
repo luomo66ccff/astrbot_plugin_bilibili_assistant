@@ -1,0 +1,102 @@
+{
+  "enabled": {
+    "description": "是否启用插件",
+    "type": "bool",
+    "default": true
+  },
+  "bilibili_cookie": {
+    "description": "B站登录 Cookie，包含 SESSDATA、bili_jct 等敏感字段",
+    "type": "text",
+    "default": "",
+    "obvious_hint": true,
+    "hint": "只填写自己的账号 Cookie，不要在聊天中发送或公开。该字段会在 WebUI 中显示，请确认管理面板访问权限。"
+  },
+  "default_check_interval_seconds": {
+    "description": "默认检查评论间隔，单位秒",
+    "type": "int",
+    "default": 300,
+    "hint": "最低建议 60 秒，过低可能触发风控。"
+  },
+  "max_replies_per_hour": {
+    "description": "每小时最大回复数",
+    "type": "int",
+    "default": 5
+  },
+  "max_replies_per_day": {
+    "description": "每日最大回复数",
+    "type": "int",
+    "default": 30
+  },
+  "auto_reply_enabled": {
+    "description": "是否启用自动回复",
+    "type": "bool",
+    "default": false,
+    "hint": "默认关闭。即使开启，也会经过安全检查和频率限制。"
+  },
+  "require_confirmation": {
+    "description": "发布前是否必须人工确认",
+    "type": "bool",
+    "default": true
+  },
+  "reply_style": {
+    "description": "回复草稿风格",
+    "type": "string",
+    "default": "friendly",
+    "options": [
+      "friendly",
+      "official",
+      "cute",
+      "concise",
+      "humorous"
+    ],
+    "labels": [
+      "友好",
+      "正式",
+      "可爱",
+      "简洁",
+      "幽默"
+    ],
+    "hint": "可选：friendly, official, cute, concise, humorous"
+  },
+  "blocked_keywords": {
+    "description": "命中后不自动回复的敏感词",
+    "type": "list",
+    "default": [
+      "辱骂",
+      "广告",
+      "诈骗",
+      "政治",
+      "色情",
+      "违法",
+      "引战"
+    ]
+  },
+  "allowed_video_list": {
+    "description": "允许主动监听的视频 BV 号列表，空列表表示不限制",
+    "type": "list",
+    "default": []
+  },
+  "admin_user_ids": {
+    "description": "允许操作发布、草稿、配置类命令的 AstrBot 用户 ID 列表；为空时允许所有人，建议正式使用时填写",
+    "type": "list",
+    "default": []
+  },
+  "blacklisted_user_ids": {
+    "description": "B站用户 mid 黑名单，命中后只生成待审核任务，不自动回复",
+    "type": "list",
+    "default": []
+  },
+  "dry_run": {
+    "description": "演练模式，开启时不会真实发布到 B站",
+    "type": "bool",
+    "default": true,
+    "obvious_hint": true,
+    "hint": "强烈建议首次部署保持开启。"
+  },
+  "chat_provider_id": {
+    "description": "生成回复草稿时使用的 AstrBot 模型提供商 ID，留空则使用默认模型",
+    "type": "string",
+    "default": "",
+    "_special": "select_provider"
+  }
+}
